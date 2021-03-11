@@ -4,5 +4,5 @@ import isHexadecimal from './isHexadecimal';
 
 export default function isMongoId(str) {
   assertString(str);
-  return isHexadecimal(str) && str.length === 24;
+  return /[A-Za-z0-9]{24}/.test(str);
 }
